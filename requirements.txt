@@ -1,0 +1,30 @@
+# Dependências do pipeline — TCC Análise de Sobrevivência (SEER câncer de mama).
+# Ambiente: Windows/PowerShell local para testes; Google Colab (GPU T4) para treino.
+#
+# Regras de pin:
+#   - numpy/pandas/scikit-learn fixam a base de dados/ML.
+#   - scikit-survival é pinado para a faixa compatível com scikit-learn==1.5.1
+#     (sksurv 0.23.x exige scikit-learn >=1.4,<1.6). Fornece RSF, Gradient Boosting
+#     de sobrevivência e o C-index de Uno (concordance_index_ipcw) — ver Plano de
+#     Modelagem e Protocolo de Validação no vault.
+#   - scipy fixado em 1.13.1: mantém scipy.integrate.simps, que o pycox 0.2.3 usa em
+#     Brier/IBS (removido no scipy 1.14). Evita monkeypatch.
+
+# --- Núcleo de dados / ML ---
+numpy==1.26.4
+pandas==2.2.2
+scipy==1.13.1
+scikit-learn==1.5.1
+
+# --- Modelos de sobrevivência clássicos ---
+lifelines==0.29.0          # Cox, Cox+splines, Kaplan-Meier, teste de proporcionalidade
+scikit-survival==0.23.1    # Random Survival Forest, Gradient Boosting, C-index de Uno
+
+# --- Deep learning de sobrevivência (treino no Colab) ---
+torch==2.3.1
+pycox==0.2.3               # DeepSurv (CoxPH) e DeepHit
+torchtuples==0.2.2
+
+# --- Utilidades ---
+matplotlib==3.9.0          # curvas de calibração, perda de treino, KM
+pytest==8.2.2

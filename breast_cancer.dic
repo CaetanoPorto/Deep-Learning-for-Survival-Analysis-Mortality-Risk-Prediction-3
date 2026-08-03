@@ -1,0 +1,64 @@
+[System]
+Output filename=C:\Users\guicp\OneDrive\Documentos\TCC\Base de dados ( SEER)\breast_cancer.csv
+Database name=Incidence - SEER Research Data, 17 Registries, Nov 2024 Sub (2000-2022) - Linked To County Attributes - Time Dependent (1990-2023) Income/Rurality, 1969-2023 Counties
+
+[Session Options]
+Type=Case Listing
+
+[Export Options]
+GZipped=false
+Variable format=labels
+File format=DOS/Windows
+Field delimiter=comma
+Missing character="NA"
+Fields with delimiter in quotes=true
+Remove thousands separators=true
+Variable names included=true
+Column Variables as Stats=false
+
+[Variables]
+Var1Name=Survival months
+Var1DisplayType=Formatted
+Var2Name=Vital status recode (study cutoff used)
+Var2DisplayType=Formatted
+Var3Name=Age recode with <1 year olds and 90+
+Var3DisplayType=Formatted
+Var4Name=Sex
+Var4DisplayType=Formatted
+Var5Name=Race recode (W, B, AI, API)
+Var5DisplayType=Formatted
+Var6Name=Grade Recode (thru 2017)
+Var6DisplayType=Formatted
+Var7Name=Derived Summary Grade 2018 (2018+)
+Var7DisplayType=Formatted
+Var8Name=Combined Summary Stage with Expanded Regional Codes (2004+)
+Var8DisplayType=Formatted
+Var9Name=Breast Subtype (2010+)
+Var9DisplayType=Formatted
+Var10Name=ER Status Recode Breast Cancer (1990+)
+Var10DisplayType=Formatted
+Var11Name=PR Status Recode Breast Cancer (1990+)
+Var11DisplayType=Formatted
+Var12Name=Derived HER2 Recode (2010+)
+Var12DisplayType=Formatted
+Var13Name=Estrogen Receptor Summary (2018+)
+Var13DisplayType=Formatted
+Var14Name=Progesterone Receptor Summary (2018+)
+Var14DisplayType=Formatted
+Var15Name=HER2 Overall Summary Recode (2018+)
+Var15DisplayType=Formatted
+Var16Name=CS tumor size (2004-2015)
+Var16DisplayType=Formatted
+Var17Name=Tumor Size Summary (2016+)
+Var17DisplayType=Formatted
+Var18Name=Regional nodes positive (1988+)
+Var18DisplayType=Formatted
+Var19Name=Regional nodes examined (1988+)
+Var19DisplayType=Formatted
+Var20Name=RX Summ--Surg Prim Site (1998+)
+Var20DisplayType=Formatted
+Var21Name=Radiation recode
+Var21DisplayType=Formatted
+Var22Name=Chemotherapy recode (yes, no/unk)
+Var22DisplayType=Formatted
+

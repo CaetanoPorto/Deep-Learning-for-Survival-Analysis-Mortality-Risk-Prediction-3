@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+data/cache/
+
+# Dados SEER — NUNCA versionar (guardrail CLAUDE.md; houve incidente de CSV de 285MB).
+# Os CSVs ficam no Google Drive, fora do repositório. O .dic pequeno pode ficar como referência.
+*.csv
+/TCC_ML_DL-20260707T020648Z-3-001/
+Artigos Referencias - Guilherme-20260707T020554Z-3-001/
